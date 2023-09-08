@@ -1,0 +1,20 @@
+<div  class="main-container">
+    <div *ngFor = "let i of cartItems">
+        <div class="card">
+            <img class="card-img-top img" src={{i.img_url}}  alt="book-image">
+            <div class="card-body">
+              <h4 class="card-title">{{i.title}}</h4>
+              <h4 class="card-title">{{i.author}}</h4>
+              <h4 class="card-title">Price: {{i.price}} rs</h4>
+              <a (click) = "buyItems(i)"  class="btn btn-primary">Buy now</a>
+              <a  class="btn btn-primary" (click) = "removeItem(i._id)">remove</a>
+            </div>
+          </div>
+    </div>
+</div>
+<div *ngIf = "showbuyitems">
+    <div *ngFor="let item of buyingItems">
+        <img class="card-img-top img" src={{item.img_url}}  alt="book-image">
+    </div>
+</div>
+

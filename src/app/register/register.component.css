@@ -1,0 +1,33 @@
+.bg-container{
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/18/21/22/beach-1751455_1280.jpg");
+    height: 100vh;
+    color: #fff;
+}
+.form-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+}
+input{
+    background-color: transparent;
+    color: green;
+    border: none;
+    border-bottom: 2px solid rgb(255, 248, 248);
+    border-color: #ffffff;
+
+}
+label{
+    margin-top: 10px;
+}
+input[type="checkbox"]{
+    margin: 0px 10px;
+}
+input[type="radio"]{
+    margin: 0px 10px;
+}
+.btn{
+    margin-top: 10px;
+    margin-left: 35%;
+}

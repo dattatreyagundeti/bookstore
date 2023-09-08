@@ -1,0 +1,15 @@
+<div class="main-container">
+    <div class="login-container">
+        <h2 class="login-con">Login Here</h2>
+
+        <input class="text-input" [(ngModel)]="userName" type="text" > 
+        <input class="text-input" type="password" > 
+        <button class="btn btn-warning" (click) = "checking()">Login</button>
+        <div *ngIf = "isvalid ">
+            <p>User Not FOUND</p>
+        </div>
+        <p>Don't Have any Account?</p>
+        <p class="btn btn-primary"  (click) = "goto()">Register here</p>
+
+    </div>
+</div> 

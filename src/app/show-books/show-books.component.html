@@ -1,0 +1,20 @@
+<div  class="main-container">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" (input)= "renderBooks()"  [(ngModel)] = "searchInput" placeholder="Search by category">
+        <button (click)="clearSearch()" class="input-group-text bg-primary text-white" >Clear search</button>
+      </div>
+    
+    <div *ngFor = "let i of renderBooks()">
+        <div class="card">
+            <img class="card-img-top img" src={{i.img_url}}  alt="book-image">
+            <div class="card-body">
+              <h4 class="card-title">{{i.title}}</h4>
+              <h4 class="card-title">{{i.author}}</h4>
+              <h4 class="card-title">Price: {{i.price}} rs</h4>
+              <a  (click) = "gotoBuypage(i._id)" class="btn btn-primary">Buy now</a>
+              <a (click) = "gotoCart(i)" class="btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+    </div>
+</div>
+

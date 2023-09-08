@@ -1,0 +1,28 @@
+<div class = "mainC">
+  <div *ngIf = "user.Name">
+    <nav class = "fixed-top" >
+      <h1 routerLink="/home">Book Store</h1>
+    
+        <a routerLink="/home" routerLinkActive = "active">Home</a> 
+      
+        <a routerLink="/addbook" routerLinkActive = "active">Add Books</a> 
+        <a routerLink="/showbooks" routerLinkActive = "active">Show books</a> 
+       
+          <a routerLink="/cart" routerLinkActive = "active">Cart <span class="count" *ngIf = "count" >({{count}})</span> </a>
+      
+        <div *ngIf = "isuserther" class="userinfo">
+          <img class="imge" src='{{profilepic}}' alt="image">
+          <span>{{Usernname}}</span>
+          <a (click) = "logout()"  ><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+        </div> 
+    </nav>
+  </div>
+ 
+  <div class = "content mt-5">
+    <router-outlet></router-outlet>
+
+  </div>
+  <app-footer *ngIf = "user.Name" ></app-footer>
+  
+  
+</div>

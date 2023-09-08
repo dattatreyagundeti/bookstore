@@ -1,0 +1,68 @@
+<div *ngIf="books; else err" class = " book-table">
+    <div class="headers">
+        <h2 class="table-title">Manage Books</h2>
+        <button class="btn add"  (click) = "openForm()">Add Book</button>
+    </div>
+    <table class = "table">
+        <thead class="text-center">
+            <tr>
+                <th>Book-Title</th>
+                <th>Author</th>
+                <th>Image Url</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor = "let i of books">
+                <td>{{i.title}}</td>
+                <td>{{i.author}}</td>
+                <td class = "imgAddress">{{i.img_url}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.category}}</td>
+                <td><button class="btn btn-primary" (click) = "openForm(i)">Edit</button></td>
+                <td><button class="btn btn-danger" (click)="deletebook(i._id)">Delete</button></td>
+                
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<ng-template #err> fetchng Error</ng-template> 
+   
+<div class="form-wrapper" *ngIf = "showForm">
+    <div class="booksForm">
+            <h2 class="text-center text-info" >{{formHeader}}</h2>
+    
+            <div class="group">
+                <label for="">title :</label>
+                <input type="text" class="form-control" [(ngModel)]="title" name="titl" required>
+            </div>
+            <div class="group">
+                <label for="">Author :</label>
+                <input type="text" class="form-control" [(ngModel)]="author" name="author" required>
+            </div>
+            <div class="group">
+                <label for="">Image Url :</label>
+                <input type="text" class="form-control" [(ngModel)]="img_url" name="img_url" required>
+            </div>
+
+            <div class="group">
+                <label for="">Price :</label>
+                <input type="text" class="form-control" [(ngModel)]="price" name="price" required>
+            </div>
+
+            <div class="group">
+                <label for="">Category :</label>
+                <input type="text" class="form-control" [(ngModel)]="category" name="category" required>
+            </div>
+            <div class="action">
+                <button class = "btn btn-primary save" (click) = "saveChanges()">Save Changes</button>
+                <button class = "btn btn-danger cancle" (click) = "closeForm()">Cancle Form</button>
+
+            </div>
+    </div>
+</div>

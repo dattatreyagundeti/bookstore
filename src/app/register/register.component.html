@@ -1,0 +1,96 @@
+
+<div class = "p-4  bg-container">
+
+    <div class="row">
+        <div class="col-5 form-container">
+            <h3 class="text-center">Registration Form</h3>
+
+            <form  [formGroup] = "registraionForm" (ngSubmit)="submitForm()">
+                <div class = "form-group">
+                    <label for="">Name</label>
+                    <input type="text" formControlName="Name" class = "form-control" required>
+                </div>
+        
+                <div class = "form-group">
+                    <label for="">Father's Name:</label>
+                    <input type="text" class = "form-control"  formControlName="fatherName" required>
+                </div>
+        
+                <div class = "form-group">
+                    <label for="">Eamil : </label>
+                    <input type="email" class = "form-control" formControlName="email" required>
+                </div>
+        
+                <div class = "form-group">
+                    <label for="">Mobile : </label>
+                    <input type="number" class = "form-control" formControlName="mobNo" required>
+                </div>
+
+                <div class = "form-group">
+                    <label for="">Image : </label>
+                    <input type="file" class = "form-control" formControlName="image" (change) = "filetourl($event)" required>
+                </div>
+    
+        
+                <div class = "form-group gender" >
+                    <h6 >Gender : </h6>
+                    <div>
+                        <input type="radio" id = "male" name = "gender" value= "male" formControlName="gender" required>
+                        <label for="male">Male </label>
+                        <input type="radio" id = "female"  name = "gender" value="female" formControlName="gender" required>
+                        <label for="female">Female </label>
+                    </div>
+
+                </div>
+        
+                <div class="checkbox">
+                    <input id = "checkbox" type ="checkbox"  formControlName="isaccept" required>
+                    <label for = "checkbox" >I acceptc this</label>
+                </div>
+        
+                
+                <button type="submit" class="btn btn-primary" >Register</button> 
+                <button (click) = "upadatingUser()">Save changes</button>
+
+            </form>
+
+        </div>
+
+        <div class = "col-7">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Gender</th>
+                    <th>update</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor = "let i of array">
+                    <td>{{i.Name}}</td>
+                    <td>{{i.fatherName}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.mobNo}}</td>
+                    <td>{{i.gender}}</td>
+                    <td><button (click)="updating(i._id,i)"><i class="fa fa-pencil"></i></button></td>
+                    <td><button (click) = "deleting(i._id)"><i class="fa fa-trash"></i></button></td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+  
+    
+    </div>  
+
+
+    <div>
+        <form>
+
+        </form>
+    </div>
+
+</div>

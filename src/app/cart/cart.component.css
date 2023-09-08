@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+.img{
+    height: 100px;
+    width: 100px;
+}
+.btn{
+    margin:15px;
+    width: 90px;
+    font-size: 12px;
+}
+.card-body{
+    text-align: center;
+}
+.card-title{
+    font-size: 13px;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}

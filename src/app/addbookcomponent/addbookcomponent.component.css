@@ -1,0 +1,62 @@
+.book-table{
+    width:100%;
+    padding: 20px 25px;
+    background-color: white;
+    margin : 30px 0px;
+    border-radius: 3px;
+
+}
+.headers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    background-color: #435d7d;
+    color: white;
+}
+.add{
+    background-color: green;
+    color:white
+}
+.form-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.booksForm{
+
+    background-color: white;
+    width: 600px;
+    padding: 20px 16px;
+    border-radius: 5px;
+
+}
+.form-control{
+    width: 90%;
+}
+.group{
+    display: flex;
+    margin: 30px 0;
+}
+.group label{
+    width: 70%;
+    line-height: 40px;
+    height: 40px;
+}
+.action{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px;
+}
+.imgAddress{
+    max-width: 200px;
+    overflow:auto;
+}

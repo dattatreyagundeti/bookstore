@@ -1,0 +1,15 @@
+.bg-container{
+    background-color: black;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns-container{
+    text-align: center;
+}
+button{
+    margin: 10px 20px;
+    width: 130px;
+
+}

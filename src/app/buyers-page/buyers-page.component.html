@@ -1,0 +1,9 @@
+<div class="item-list">
+    <div *ngFor="let i of buyItemsArray" class="item-card">
+        <img class="card-img-top img" src="{{i.img_url}}" alt="book-image">
+        <h4 class="card-title">{{i.title}}</h4>
+        <p class="card-author">{{i.author}}</p>
+        <p class="card-price">Price: {{i.price}} rs</p>
+        <button class="place-order-btn" (click)="alerth()">Place Order</button>
+    </div>
+</div>
